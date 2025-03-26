@@ -150,6 +150,8 @@ public class SQLiteConnectionManager {
         try (Connection conn = DriverManager.getConnection(databaseURL);
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
 
+                    stmt.setString(2, sql);
+
             ResultSet resultRows = stmt.executeQuery();
             if (resultRows.next()) {
                 int result = resultRows.getInt("total");
