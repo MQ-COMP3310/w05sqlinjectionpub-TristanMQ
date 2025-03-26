@@ -77,7 +77,7 @@ public class App {
 
             while (!guess.equals("q")) {
 
-                if (guess.matches(regex:"^[a-zA-Z]{4}$")){
+                if (guess.matches("^[a-zA-Z]{4}$")){
 
                 System.out.println("You've guessed '" + guess+"'.");
 
